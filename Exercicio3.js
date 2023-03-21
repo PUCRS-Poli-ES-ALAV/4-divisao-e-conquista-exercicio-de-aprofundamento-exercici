@@ -1,10 +1,25 @@
-function maxVal2(A, init, end) {  
-    if (end - init <= 1)
-        return max(A[init], A[end]);  
-    else {
-          var m = (init + end)/2;
-          var v1 = maxVal2(A,init,m);   
-          var v2 = maxVal2(A,m+1,end);  
-          return max(v1,v2);
-         }
-}
+function maxVal1(A) {
+    let max = A[0];
+    for (let i = 1; i < A.length; i++) {
+      if (A[i] > max) {
+        max = A[i];
+      }
+    }
+    return max;
+  }
+
+  for (const n of sizes) {
+    const A = new Array(n).fill(0).map(() => Math.floor(Math.random() * Math.pow(2, 31)));
+    
+    const start = new Date();
+    const max = maxVal1(A);
+    const end = new Date();
+    const time = end - start;
+    const iterations = n - 1;
+  
+    console.log(`Tamanho do vetor: ${n}`);
+    console.log(`Maior valor: ${max}`);
+    console.log(`Tempo gasto: ${time} milissegundos\n`);
+  }
+  
+  const sizes = [32, 2048, 1048576];
