@@ -1,16 +1,25 @@
-const maxNumbers = 10;
-let list = [];
-for (let i = 0; i < maxNumbers; i++) {
-   list[i] = i + 1;
-}
-console.log(list); 
-
-function maxVal1(maxNumbers, n) {  
-     max = maxNumbers[0];
-    for (var i = 1; i < n; i++) {  
-        if( maxNumbers[i] > max ) 
-           max = maxNumbers[i];
-    }
-    return max;
-}
-
+function maxVal1(A) {
+   let max = A[0];
+   for (let i = 1; i < A.length; i++) {
+     if (A[i] > max) {
+       max = A[i];
+     }
+   }
+   return max;
+ }
+ 
+ const sizes = [32, 2048, 1048576];
+ 
+ for (const n of sizes) {
+   const A = new Array(n).fill(0).map(() => Math.floor(Math.random() * Math.pow(2, 31)));
+   
+   const start = new Date();
+   const max = maxVal1(A);
+   const end = new Date();
+   const time = end - start;
+   const iterations = n - 1;
+ 
+   console.log(`Tam do vetor: ${n}`);
+   console.log(`Maior valor: ${max}`);
+   console.log(`Tempo gasto: ${time} milissegundos\n`);
+ }
