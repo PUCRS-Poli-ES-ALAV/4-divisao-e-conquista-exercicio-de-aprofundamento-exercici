@@ -41,12 +41,12 @@ const end = new Date().getTime();
 console.log("TESTE VETOR COM TAMANHO 30");
 console.log("Input do Vetor:", arr);
 console.log("Vetor Ordenado:", sorted);
-console.log(`Número de iterações: ${arr.length * (Math.log2(arr.length) + 1)}`);
+console.log(`Número de iterações: ${arr.length * (Math.log2(arr.length) + 1)}`); // Cria o vetor com números aleatórios entre 0 e 99
 console.log(`Tempo de execução: ${end - start} ms`);
 
 
 // teste para vetor de tamanho 2048
-const arr2 = Array.from({ length: 2048 }, () => Math.floor(Math.random() * 100));
+const arr2 = Array.from({ length: 2048 }, () => Math.floor(Math.random() * 3000)); // Cria o vetor com números aleatórios entre 0 e 99
 
 const start2 = new Date().getTime();
 const sorted2 = mergeSort(arr2);
@@ -60,7 +60,7 @@ console.log(`Número de iterações: ${arr2.length * (Math.log2(arr2.length) + 1
 console.log(`Tempo de execução: ${end2 - start2} ms`);
 
 // teste para vetor de tamanho 1.048.576
-const arr3 = Array.from({ length: 1048576 }, () => Math.floor(Math.random() * 100));
+const arr3 = Array.from({ length: 1048576 }, () => Math.floor(Math.random() * 500000)); // Cria o vetor com números aleatórios entre 0 e 99
 
 const start3 = new Date().getTime();
 const sorted3 = mergeSort(arr3);
