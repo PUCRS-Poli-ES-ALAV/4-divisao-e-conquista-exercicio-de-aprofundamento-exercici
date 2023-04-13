@@ -39,7 +39,6 @@ const sorted = mergeSort(arr);
 const end = new Date().getTime();
 
 console.log("TESTE VETOR COM TAMANHO 30");
-console.log("Input do Vetor:", arr);
 console.log("Vetor Ordenado:", sorted);
 console.log(`Número de iterações: ${arr.length * (Math.log2(arr.length) + 1)}`); // Cria o vetor com números aleatórios entre 0 e 99
 console.log(`Tempo de execução: ${end - start} ms`);
@@ -54,7 +53,6 @@ const end2 = new Date().getTime();
 
 console.log("");
 console.log("TESTE VETOR COM TAMANHO 2048");
-console.log("Input do Vetor: ", arr2);
 console.log("Vetor Ordenado:", sorted2);
 console.log(`Número de iterações: ${arr2.length * (Math.log2(arr2.length) + 1)}`);
 console.log(`Tempo de execução: ${end2 - start2} ms`);
@@ -68,7 +66,6 @@ const end3 = new Date().getTime();
 
 console.log("");
 console.log("TESTE VETOR COM TAMANHO 1048576");
-console.log("Input do Vetor: ", arr3);
 console.log("Vetor Ordenado:", sorted3);
 console.log(`Número de iterações: ${arr3.length * (Math.log2(arr3.length) + 1)}`);
 console.log(`Tempo de execução: ${end3 - start3} ms`);
